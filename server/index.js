@@ -27,12 +27,7 @@ async function run() {
         const database = client.db("resolute");
         const usersCollection = database.collection("users");
         const commentCollection = database.collection("comment");
-        // const usersInfoDB = database.collection("usersInfoDBCollection");
-        // const galleryDB = database.collection("galleryCollection");
-        // const blogDB = database.collection("blogCollection");
-        // const classesDB = database.collection("classesCollection");
-        // const trainerApplicationDB = database.collection("trainerApplicationDB");
-        // const bookingsDB = database.collection("bookingsCollection");
+       
 
         // users data save
 
