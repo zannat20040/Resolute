@@ -14,7 +14,7 @@ const Edit = ({ userDetails, refetch }) => {
     const image = event.target.files[0];
     const photo = await imgUpload(image);
     await axios
-      .patch(`http://localhost:5000/users/${userDetails?._id}`, {
+      .patch(`https://resolute-server-rose.vercel.app/users/${userDetails?._id}`, {
         photo: photo,
       })
       .then((res) => {
@@ -40,7 +40,7 @@ const Edit = ({ userDetails, refetch }) => {
     const username = form.name.value;
     console.log(username)
     axios
-      .patch(`http://localhost:5000/users/${userDetails?._id}`, {
+      .patch(`https://resolute-server-rose.vercel.app/users/${userDetails?._id}`, {
         name: username,
       })
       .then((res) => {

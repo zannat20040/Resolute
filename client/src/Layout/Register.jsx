@@ -33,7 +33,7 @@ const Register = () => {
         };
 
         axios
-          .post("http://localhost:5000/users", userInfo)
+          .post("https://resolute-server-rose.vercel.app/users", userInfo)
           .then((res) => {
             updateProfile(user, {
               displayName: name,

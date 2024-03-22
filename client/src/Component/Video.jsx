@@ -20,7 +20,7 @@ const Video = memo(() => {
   } = useQuery({
     queryKey: ["allComments"],
     queryFn: async () => {
-      const response = await axios.get("http://localhost:5000/comments");
+      const response = await axios.get("https://resolute-server-rose.vercel.app/comments");
       return response.data;
     },
   });
@@ -49,7 +49,7 @@ const Video = memo(() => {
     };
 
     axios
-      .post("http://localhost:5000/comments", commentInfo)
+      .post("https://resolute-server-rose.vercel.app/comments", commentInfo)
       .then((res) => {
         console.log(res.data);
         refetch();
@@ -87,7 +87,6 @@ const Video = memo(() => {
               url="https://www.youtube.com/watch?v=LXb3EKWsInQ"
               controls={true}
               width="auto"
-              height="auto"
               onProgress={HandletimeStamp}
             />
 
@@ -97,7 +96,7 @@ const Video = memo(() => {
                 <img
                   width={50}
                   height={50}
-                  className=" rounded-full bg-black/40"
+                  className="w-14 h-14 rounded-full bg-black/40"
                   src={user?.photoURL}
                   alt="card navigate ui"
                 />

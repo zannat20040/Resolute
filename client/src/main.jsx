@@ -14,6 +14,7 @@ import {
 } from "@tanstack/react-query";
 import Video from "./Component/Video";
 import Form from "./Layout/Form";
+import Home from "./Layout/Home";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
     path: "/",
     element: <Root />,
     children: [
+      { path: "/", element: <Home /> },
       { path: "/register", element: <Register /> },
       { path: "/login", element: <Login /> },
       { path: "/allusers", element: <AllUsers /> },
